@@ -1,0 +1,163 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.labelOnTop {
+  margin-top: 1rem;
+}
+
+.labelText {
+  color: var(--white-color);
+  font-family: var(--Roboto);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 150%;
+
+}
+
+.onTopLabel {
+  position: absolute;
+  z-index: 1;
+  background-color: var(--white-color);
+  line-height: 1;
+  padding-inline: 8px;
+  top: -8px;
+  margin-inline-start: 1.5rem;
+  color: var(--primary-color);
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--white-color);
+  font-family: var(--Roboto);
+}
+
+.inputBox:focus-within {
+  outline: none !important;
+}
+
+.inputBox:disabled {
+  cursor: not-allowed;
+}
+
+.noBorder {
+  border: none;
+}
+
+.inputPassContainer {
+
+  display: flex;
+  height: 50px;
+  padding: 0px 20px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 3px;
+  border: 1px solid var(--white-color);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.05);
+}
+
+.inputPassContainer input::placeholder {
+  color: var(--placeholder-text-color);
+  font-family: var(--Roboto);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+}
+
+.prefix {
+  background-color: inherit;
+  border: none;
+  font-family: var(--ff-primary-bold);
+  font-size: 16px;
+  color: var(--black-color);
+}
+
+.inputPassContainer input:disabled {
+  background-color: var(--disabled-input-color);
+  color: #c9c9c9;
+  user-select: none;
+}
+
+.inputPassContainer .passwordIcon {
+  position: absolute;
+  right: 15px;
+  top: 47px;
+  bottom: 50%;
+  color: var(--password-icon-color);
+  cursor: pointer;
+}
+
+.errorText {
+  color: var(--error-color);
+}
+
+.disabled {
+  color: var(--disabled-label-color);
+}
+
+.leftIconBox {
+  position: absolute;
+  left: 20px;
+  top: 55%;
+  bottom: 45%;
+  transform: translateY(-50%);
+  height: max-content;
+}
+
+.rightIcon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: max-content;
+}
+
+.inputBox::-webkit-outer-spin-button,
+.inputBox::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*  Firefox  */
+.inputBox[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+
+.inputBox[type="date"]::placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.inputBox[type="date"]::-webkit-datetime-edit {
+  color: var(--placeholder-text-color);
+
+}
+
+.inputBox[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  margin-inline-start: 450px;
+}
+
+@media (max-width: 578px) {
+  .labelText {
+    font-size: var(--fs-base);
+  }
+}
+
+@media screen and (min-width : 1600px) {
+  .inputBox[type="date"]::-webkit-calendar-picker-indicator {
+
+    margin-inline-start: 610px;
+  }
+}
